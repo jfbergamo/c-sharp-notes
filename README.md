@@ -21,5 +21,11 @@ MCD(a, b):
 * ma non lo è se è divisibile per 100
 * ma lo è se è divisibile per 400
 
-## TODO
+## Triangoli (TODO)
 Data una terna di numeri, calcolare se possono essere lati di un triangolo
+```
+p -> semiperimetro
+p = (a+b+c)/2
+A = sqrt(p*(p-a)*(p-b)*(p-c))
+Se l'area è calcolabile il triangolo è valido
+```
