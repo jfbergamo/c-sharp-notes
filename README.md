@@ -6,6 +6,22 @@
 * sommare tutti i numeri in posizione pari moltiplicati per 3
 * se la somma delle due somme è un multiplo di 10 allora è valido
 
+## Trova il 7
+Come capire se un numero ha il 7 senza convertirlo in stringa:
+```c-sharp
+static bool hasSeven(int n)
+{
+    int x = n;
+    int mod;
+    while (x > 0)
+    {
+        mod = x % 10;
+        if (mod == 7) return true;
+        x /= 10;
+    }
+    return false;
+}
+```
 
 ## Formula MCD
 ```
@@ -21,7 +37,7 @@ MCD(a, b):
 * ma non lo è se è divisibile per 100
 * ma lo è se è divisibile per 400
 
-## Triangoli (TODO)
+## Triangoli
 Data una terna di numeri, calcolare se possono essere lati di un triangolo
 ```
 p -> semiperimetro
@@ -29,3 +45,7 @@ p = (a+b+c)/2
 A = sqrt(p*(p-a)*(p-b)*(p-c))
 Se l'area è calcolabile il triangolo è valido
 ```
+
+## Array
+Alcuni esercizi con gli array, tra cui:
+* Elenca quanti giorni hanno i mesi per X anni
