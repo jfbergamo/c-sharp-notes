@@ -50,5 +50,6 @@ Se l'area è calcolabile il triangolo è valido
 Alcuni esercizi con gli array, tra cui:
 * Elenca quanti giorni hanno i mesi per X anni
 * Merge sort tra due array ordinati
-* Merge sort con un array di array ordinati (TODO)
+* Merge sort con un array di array ordinati
 * Media tra valori di un array
+* Dato un array di booleani che codificano un numero in binario, ottenre il suo binario
