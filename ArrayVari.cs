@@ -7,17 +7,31 @@ public class ArrayVari
     public static void main(string[] args)
     {
         Console.WriteLine("------------------------------------------");
-        ContaGiorni(5);
+        {
+            ContaGiorni(5);
+        }
         Console.WriteLine("------------------------------------------");
-        int[] a = {7, 14, 21, 28, 35, 42, 49, 56, 63, 70};
-        int[] b = {8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88};
-        int[] c = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-        PrintArray(MergeSortedX(new int[][] {a, b, c}));
+        {
+            int[] a = {7, 14, 21, 28, 35, 42, 49, 56, 63, 70};
+            int[] b = {8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88};
+            int[] c = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+            PrintArray(MergeSortedX(new int[][] {a, b, c}));
+        }
         Console.WriteLine("------------------------------------------");
-        Console.WriteLine(Avg(new int[] {30, 31}));
+        {
+            Console.WriteLine(Avg(new int[] {30, 31}));
+        }
         Console.WriteLine("------------------------------------------");
-        // 67 -> 01000011
-        Console.WriteLine(FromBools(new bool[] {false, true, false, false, false, false, true, true}));
+        {
+            // 67 -> 01000011
+            Console.WriteLine(FromBools(new bool[] {false, true, false, false, false, false, true, true}));
+        }
+        Console.WriteLine("------------------------------------------");
+        {
+            string word = "ToASCII";
+            Console.WriteLine($"{word}:");
+            PrintArray(ToASCII(word), "    ");
+        }
     }
 
     static void ContaGiorni(int anni)
@@ -34,11 +48,11 @@ public class ArrayVari
         }
     }
 
-    static void PrintArray(int[] xs)
+    static void PrintArray(int[] xs, string prefix = "")
     {
         foreach (int x in xs)
         {
-            Console.WriteLine(x);
+            Console.WriteLine($"{prefix}{x}");
         }
     }
 
@@ -96,5 +110,15 @@ public class ArrayVari
             pow *= 2;
         }        
         return n;
+    }
+
+    static int[] ToASCII(string word)
+    {
+        int[] ascii = new int[word.Length];
+        for (int i = 0; i < word.Length; i++)
+        {
+            ascii[i] = (int)word[i];
+        }
+        return ascii;
     }
 }
