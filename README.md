@@ -49,3 +49,6 @@ Se l'area è calcolabile il triangolo è valido
 ## Array
 Alcuni esercizi con gli array, tra cui:
 * Elenca quanti giorni hanno i mesi per X anni
+* Merge sort tra due array ordinati
+* Merge sort con un array di array ordinati (TODO)
+* Media tra valori di un array
