@@ -54,4 +54,4 @@ Alcuni esercizi con gli array, tra cui:
 * Media tra valori di un array
 * Dato un array di booleani che codificano un numero in binario, ottenre il suo binario
 * Converte una stringa in un array dei suoi codici ASCII
-* Controlla se una parola è in ordine alfabetico (TODO)
+* Controlla se una parola è in ordine alfabetico

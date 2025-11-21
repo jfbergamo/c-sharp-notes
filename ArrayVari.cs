@@ -1,6 +1,4 @@
 using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.Xml.Serialization;
 
 public class ArrayVari
 {
@@ -29,8 +27,16 @@ public class ArrayVari
         Console.WriteLine("------------------------------------------");
         {
             string word = "ToASCII";
-            Console.WriteLine($"{word}:");
+            Console.WriteLine($"\"{word}\" in ASCII:");
             PrintArray(ToASCII(word), "    ");
+        }
+        Console.WriteLine("------------------------------------------");
+        {
+            string[] words = {"abcd", "amor", "omar", "piva", "12", "anton1o"};
+            foreach (string word in words)
+            {
+                Console.WriteLine($"La parola {word}{(IsOrdineAlfabetico(word) ? "" : " NON")} è in ordine alfabetico.");
+            }
         }
     }
 
@@ -120,5 +126,17 @@ public class ArrayVari
             ascii[i] = (int)word[i];
         }
         return ascii;
+    }
+
+    static bool IsOrdineAlfabetico(string word)
+    {
+        word = word.ToLower();
+        if (!Char.IsLetter(word[0])) return false;
+
+        for (int i = 1; i < word.Length; i++)
+        {
+            if (!Char.IsLetter(word[i]) || word[i-1] > word[i]) return false;
+        }
+        return true;
     }
 }
