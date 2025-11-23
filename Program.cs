@@ -7,6 +7,7 @@
         // MCD.main(args);
         // IsValidDate.main(args);
         // Triangoli.main(args);
-        ArrayVari.main(args);
+        // ArrayVari.main(args);
+        Base64.main(args);
     }
 }
