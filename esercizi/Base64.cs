@@ -82,12 +82,15 @@ public class Base64
         int sextets = 4;
         int octets = 3;
 
+        // STEP 1: dividere la parola in gruppi da 4 sestetti
         for (int i = 0; i < word.Length; i += sextets)
         {
             int stream = 0;
             int blanks = 0;
             for (int j = 0; j < sextets; j++)
             {
+                // STEP 2: decodificare ogni sestetto
+
                 byte sextet = (byte)word[i + j];
                 byte x;
 
@@ -128,35 +131,25 @@ public class Base64
                 stream |= x << (6 * (sextets - j - 1));
             }
 
+            // STEP 3 e 4: trasformare i 4 sestetti in 3 otteti e salvare il loro valore
             for (int j = 0; j < octets; j++)
             {
                 byte octet = (byte)(stream >> (8 * (octets - j - 1)));
                 bytes.Add(octet);
             }
 
+            // STEP 5: rimuovere gli spazi bianchi rappresentati da =
             for (; blanks > 0; blanks--) bytes.RemoveAt(bytes.Count - 1);
         }
 
         return bytes.ToArray();
     }
 
+    // Metodo di debug per stampare i byte in binario
     static void PrintBinary(byte bits, int pad = 8)
     {
         string res = Convert.ToString(bits, 2);
         while (res.Length < pad) res = '0' + res;
         Console.WriteLine(res);
     }
-
-    // static int OctetsToInt(byte[] octets)
-    // {
-    //     Debug.Assert(octets.Length == 3);
-    //     // int n = (octets[0] << 16) | (octets[1] << 8) | octets[2];
-    //     int n = 0;
-    //     for (int i = 0; i < octets.Length; i++)
-    //     {
-    //         n |= octets[i] << (8 * (octets.Length - i - 1));
-    //     }
-    //     // Console.WriteLine(Convert.ToString(n, 2));
-    //     return n;
-    // }
 }
