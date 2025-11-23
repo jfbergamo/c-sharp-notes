@@ -55,3 +55,7 @@ Alcuni esercizi con gli array, tra cui:
 * Dato un array di booleani che codificano un numero in binario, ottenre il suo binario
 * Converte una stringa in un array dei suoi codici ASCII
 * Controlla se una parola è in ordine alfabetico
+
+## Base64
+* Codifica un array di byte in una stringa in Base64
+* Decodifica una stringa in Base64 in un array di byte
