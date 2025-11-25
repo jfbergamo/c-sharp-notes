@@ -59,3 +59,6 @@ Alcuni esercizi con gli array, tra cui:
 ## Base64
 * Codifica un array di byte in una stringa in Base64
 * Decodifica una stringa in Base64 in un array di byte
+
+## ArrayOrdered
+* Controlla se un array è ordinato
