@@ -62,3 +62,9 @@ Alcuni esercizi con gli array, tra cui:
 
 ## ArrayOrdered
 * Controlla se un array è ordinato
+
+## Fibonacci
+Esercizi sulla sequenza di Fibonacci:
+* Mostra i primi n numeri della sequenza
+* Simula la sequenza con lettere vere
+* **TODO** Esercizio di Tissino
