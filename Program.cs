@@ -10,6 +10,7 @@
         // ArrayVari.main(args);
         // Base64.main(args);
         // ArrayOrdered.main(args);
-        Fibonacci.main(args);
+        // Fibonacci.main(args);
+        Null.main(args);
     }
 }
