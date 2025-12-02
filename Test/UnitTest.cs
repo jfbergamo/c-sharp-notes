@@ -1,11 +1,5 @@
-public class UnitTest
+public class UnitTest<T>
 {
-    public struct Test<T>
-    {
-        public T provided;
-        public T expected;
-    }
-
     private int count;
 
     public UnitTest()
@@ -13,21 +7,21 @@ public class UnitTest
         count = 0;
     }
 
-    public bool TestOne<T>(Test<T> test)
+    public bool TestOne(Test<T> test)
     {
         count++;
-        if (test.provided?.Equals(test.expected) ?? true)
+        if (test.Provided?.Equals(test.Expected) ?? true)
         {
             return true;
         }
         else
         {
-            Console.Error.WriteLine($"ERRORE: Test numero {count} fallito! Atteso: {test.expected}, ottenuto {test.provided}.");
+            Console.Error.WriteLine($"ERRORE: Test numero {count} fallito! Atteso: {test.Expected}, ottenuto {test.Provided}.");
             return false;
         }
     }
 
-    public bool TestAll<T>(Test<T>[] tests)
+    public bool TestAll(Test<T>[] tests)
     {
         bool success = true;
         foreach (Test<T> test in tests)

@@ -2,6 +2,12 @@ public class Null
 {
     public static void main(string[] args)
     {
+        // var u = new UnitTest<double?>();
+        // u.TestAll(
+            // new Test<double?>(
+                // PeggioreTraIscritti
+            // )
+        // );
         double[] punteggi = {-3, -5, -1.5, 6, 12, 4};
         bool[] iscritto = {true, true, false, true, false, true};
         Console.WriteLine(PeggioreTraIscritti(punteggi, iscritto));
