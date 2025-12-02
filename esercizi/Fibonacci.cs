@@ -2,8 +2,8 @@ public class Fibonacci
 {
     public static void main(string[] args)
     {
-        int limit = 1000;
-        // FibNumbers(limit);
+        int limit = 5000;
+        FibNumbers(limit);
         FibAB(limit, 'R', 'L');
     }
 
@@ -24,7 +24,6 @@ public class Fibonacci
 
     static void FibAB(int limit, char a = 'A', char b = 'B')
     {
-        // int limit = 13
         string result = $"{a}";
         while (result.Length <= limit)
         {
@@ -37,6 +36,7 @@ public class Fibonacci
             }
             result = c;
         }
+        // Console.WriteLine(result);
     }
 
     static string Directions(int limit)
