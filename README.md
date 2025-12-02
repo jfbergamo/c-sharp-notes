@@ -68,3 +68,13 @@ Esercizi sulla sequenza di Fibonacci:
 * Mostra i primi n numeri della sequenza
 * Simula la sequenza con lettere vere
 * **TODO** Esercizio di Tissino
+
+## Null
+Esercizio per testare le variabili nullable.
+**Da rivedere**
+
+## Carte (TODO)
+Esercizi sulle carte da Scala.
+* Data una stringa, indicare se la carta è valida
+* Data una carta, indicare la sua carta successiva, se non c'è null
+* Mescola un mazzo di carte ([Algoritmo Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
