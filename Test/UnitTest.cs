@@ -18,7 +18,7 @@ public class UnitTest<T> : List<Tuple<T, T>>
         }
         else
         {
-            Console.Error.WriteLine($"ERRORE: Test numero {this.test_n} fallito! Atteso: {test.Item1?.ToString() ?? "null"}, ottenuto {test.Item2?.ToString() ?? "null"}.");
+            Console.Error.WriteLine($"ERRORE: Test numero {this.test_n} fallito! Atteso: {test.Item2?.ToString() ?? "null"}, ottenuto {test.Item1?.ToString() ?? "null"}.");
             return false;
         }
     }
@@ -38,8 +38,9 @@ public class UnitTest<T> : List<Tuple<T, T>>
         return success;
     }
 
-    public void ResetCount()
+    public void Reset()
     {
         test_n = 0;
+        Clear();
     }
 }

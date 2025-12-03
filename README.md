@@ -78,3 +78,7 @@ Esercizi sulle carte da Scala.
 * Data una stringa, indicare se la carta è valida
 * Data una carta, indicare la sua carta successiva, se non c'è null
 * Mescola un mazzo di carte ([Algoritmo Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
+
+## Mate
+Alcune funzioni matematiche
+**TBD**

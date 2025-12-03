@@ -11,7 +11,8 @@
         // Base64.main(args);`
         // ArrayOrdered.main(args);
         // Fibonacci.main(args);
-        Null.main(args);
+        // Null.main(args);
         // Carte.main(args);
+        Mate.main(args);
     }
 }
