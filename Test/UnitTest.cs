@@ -1,37 +1,37 @@
 using System.Runtime.CompilerServices;
 
-public class UnitTest<T> : List<Test<T>>
+public class UnitTest<T> : List<Tuple<T, T>>
 {
-    private int test_n;
+    private int test_n; 
 
     public UnitTest() : base()
     {
         test_n = 0;
     }
 
-    public bool TestOne(Test<T> test)
+    public bool TestOne(Tuple<T,T> test)
     {
         this.test_n++;
-        if (test.Provided?.Equals(test.Expected) ?? true)
+        if (test.Item1?.Equals(test.Item2) ?? true)
         {
             return true;
         }
         else
         {
-            Console.Error.WriteLine($"ERRORE: Test numero {this.test_n} fallito! Atteso: {test.Expected?.ToString() ?? "null"}, ottenuto {test.Provided?.ToString() ?? "null"}.");
+            Console.Error.WriteLine($"ERRORE: Test numero {this.test_n} fallito! Atteso: {test.Item1?.ToString() ?? "null"}, ottenuto {test.Item2?.ToString() ?? "null"}.");
             return false;
         }
     }
 
     public void Add(T provided, T expected)
     {
-        Add(new Test<T>(provided, expected));
+        Add(new Tuple<T, T>(provided, expected));
     }
 
     public bool TestAll()
     {
         bool success = true;
-        foreach (Test<T> test in this)
+        foreach (Tuple<T, T> test in this)
         {
             if (!TestOne(test)) success = false;
         }
