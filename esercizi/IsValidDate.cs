@@ -2,22 +2,22 @@ public class IsValidDate
 {
     public static void main(string[] args)
     {
-        bool success = true;
+        var u = new UnitTest<bool>();
 
-        if (!TestValidDate(1,1,1970, true)) success = false;
-        if (!TestValidDate(32,1,2025, false)) success = false;
-        if (!TestValidDate(-1,13,2025, false)) success = false;
-        if (!TestValidDate(29,2,2023, false)) success = false;
-        if (!TestValidDate(29,2,2024, true)) success = false;
-        if (!TestValidDate(30,2,2024, false)) success = false;
-        if (!TestValidDate(29,2,2100, false)) success = false;
-        if (!TestValidDate(29,2,2400, true)) success = false;
-        if (!TestValidDate(15,5,1599, false)) success = false;
-        if (!TestValidDate(22,9,3000, false)) success = false;
-        if (!TestValidDate(31,9,2026, false)) success = false;
-        if (!TestValidDate(31,11,2026, false)) success = false;
+        u.Add(ValidDate(01,01,1970), true);
+        u.Add(ValidDate(32,01,2025), false);
+        u.Add(ValidDate(-1,13,2025), false);
+        u.Add(ValidDate(29,02,2023), false);
+        u.Add(ValidDate(29,02,2024), true);
+        u.Add(ValidDate(30,02,2024), false);
+        u.Add(ValidDate(29,02,2100), false);
+        u.Add(ValidDate(29,02,2400), true);
+        u.Add(ValidDate(15,05,1599), false);
+        u.Add(ValidDate(22,09,3000), false);
+        u.Add(ValidDate(31,09,2026), false);
+        u.Add(ValidDate(31,11,2026), false);
 
-        Console.WriteLine("{0}utti i test sono stati conclusi con successo.", success ? "T" : "Non t");
+        if (u.TestAll()) Console.WriteLine("Tutti i test sono stati passati.");
     }
 
     static bool ValidDate(int d, int m, int y)
@@ -55,14 +55,4 @@ public class IsValidDate
         return false;
     }
 
-    static bool TestValidDate(int d, int m, int y, bool res)
-    {
-        bool test = ValidDate(d, m , y);
-        if (test != res)
-        {
-            Console.Error.WriteLine("Test fallito: ValidDate({0}, {1}, {2}). Atteso {3}, ottenuto {4}.", d, m, y, res, test);
-            return false;
-        }
-        return true;
-    }
 }

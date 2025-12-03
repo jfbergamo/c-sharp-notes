@@ -2,17 +2,16 @@ public class Triangoli
 {
     public static void main(string[] args)
     {
-        bool success = true;
-
+        var u = new UnitTest<bool>();
         // TODO: aggiungere dei test
 
-        if (!TestValidTriangle(12,6,6, false)) success = false;
-        if (!TestValidTriangle(1,2,3, false)) success = false;
-        if (!TestValidTriangle(0,7,25, false)) success = false;
-        if (!TestValidTriangle(12,12,6, true)) success = false;
-        if (!TestValidTriangle(7,7,7, true)) success = false;
+        u.Add(ValidTriangle(12,6,6), false);
+        u.Add(ValidTriangle(1,2,3), false);
+        u.Add(ValidTriangle(0,7,25), false);
+        u.Add(ValidTriangle(12,12,6), true);
+        u.Add(ValidTriangle(7,7,7), true);
 
-        Console.WriteLine("{0}utti i test sono stati conclusi con successo.", success ? "T" : "Non t");
+        if (u.TestAll()) Console.WriteLine("Tutti i test superati.");
 
     }
 
@@ -23,16 +22,5 @@ public class Triangoli
         // float A = Math.Sqrt(d); // se d < 0 è fuori dal dominio di sqrt
         return d > 0; // > 0 e non >= 0 perché sqrt(0) = 0 e 
                      // un triangolo non può avere area = 0
-    }
-
-    static bool TestValidTriangle(int a, int b, int c, bool res)
-    {
-        bool test = ValidTriangle(a, b, c);
-        if (test != res)
-        {
-            Console.Error.WriteLine("Test fallito: ValidTraingle({0}, {1}, {2}). Atteso {3}, ottenuto {4}.", a, b, c, res, test);
-            return false;
-        }
-        return true;
     }
 }
