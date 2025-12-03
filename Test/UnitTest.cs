@@ -1,30 +1,37 @@
-public class UnitTest<T>
-{
-    private int count;
+using System.Runtime.CompilerServices;
 
-    public UnitTest()
+public class UnitTest<T> : List<Test<T>>
+{
+    private int test_n;
+
+    public UnitTest() : base()
     {
-        count = 0;
+        test_n = 0;
     }
 
     public bool TestOne(Test<T> test)
     {
-        count++;
+        this.test_n++;
         if (test.Provided?.Equals(test.Expected) ?? true)
         {
             return true;
         }
         else
         {
-            Console.Error.WriteLine($"ERRORE: Test numero {count} fallito! Atteso: {test.Expected}, ottenuto {test.Provided}.");
+            Console.Error.WriteLine($"ERRORE: Test numero {this.test_n} fallito! Atteso: {test.Expected?.ToString() ?? "null"}, ottenuto {test.Provided?.ToString() ?? "null"}.");
             return false;
         }
     }
 
-    public bool TestAll(Test<T>[] tests)
+    public void Add(T provided, T expected)
+    {
+        Add(new Test<T>(provided, expected));
+    }
+
+    public bool TestAll()
     {
         bool success = true;
-        foreach (Test<T> test in tests)
+        foreach (Test<T> test in this)
         {
             if (!TestOne(test)) success = false;
         }
@@ -33,6 +40,6 @@ public class UnitTest<T>
 
     public void ResetCount()
     {
-        count = 0;
+        test_n = 0;
     }
 }
