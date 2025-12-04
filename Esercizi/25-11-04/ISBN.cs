@@ -4,7 +4,52 @@
 
         private const int ISBN_LENGTH = 13;
 
-        private static bool isValidISBN(string code) {
+        static int Interactive()
+        {
+            while (true)
+            {
+                Console.WriteLine("Ciao! Inserisci un codice:");
+                Console.Write("> ");
+                string code = Console.ReadLine() ?? "";
+
+                Console.WriteLine("Il codice {0}è un ISBN.", IsValidISBN(code) ? "" : "NON ");
+
+                Console.Write("Vuoi controllare un altro codice? [S/N]: ");
+                if (Console.ReadLine()?.ToLower() != "s") break;
+            }
+            return 0;
+        }
+
+        public static int main(string[] args)
+        {
+            bool interactive = false;
+
+            if (interactive) return Interactive();
+
+            var u = new UnitTest<bool>();
+
+            u.Add(IsValidISBN("9788849293371"), true);
+            u.Add(IsValidISBN("1"), false);
+            u.Add(IsValidISBN("12"), false);
+            u.Add(IsValidISBN("123"), false);
+            u.Add(IsValidISBN("1234"), false);
+            u.Add(IsValidISBN("12345"), false);
+            u.Add(IsValidISBN("123456"), false);
+            u.Add(IsValidISBN("1234567"), false);
+            u.Add(IsValidISBN("12345678"), false);
+            u.Add(IsValidISBN("123456789"), false);
+            u.Add(IsValidISBN("1234567891"), false);
+            u.Add(IsValidISBN("12345678912"), false);
+            u.Add(IsValidISBN("123456789125"), false);
+            u.Add(IsValidISBN("1234567891256"), false);
+            u.Add(IsValidISBN("abcdefghijklm"), false);
+
+            if (u.TestAll()) Console.WriteLine("Test superati.");
+
+            return 0;
+        }
+        
+        static bool IsValidISBN(string code) {
             if (code.Length != ISBN_LENGTH) return false;
             int[] digits;
             try {
@@ -21,20 +66,6 @@
             }
 
             return sum % 10 == 0;
-        }
-
-        public static void main(string[] args)
-        {
-            while (true) {
-                Console.WriteLine("Ciao! Inserisci un codice:");
-                Console.Write("> ");
-                string code = Console.ReadLine() ?? "";
-
-                Console.WriteLine("Il codice {0}è un ISBN.", isValidISBN(code) ? "" : "NON ");
-
-                Console.Write("Vuoi controllare un altro codice? [S/N]: ");
-                if (Console.ReadLine()?.ToLower() != "s") break;
-            }
         }
     }
 }
