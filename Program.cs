@@ -2,18 +2,17 @@
 {
     public static void Main(string[] args)
     {
-        // ISBN.main(args);
-        // TrovaSette.main(args);
-        // MCD.main(args);
-        // IsValidDate.main(args);
-        // Triangoli.main(args);
-        // ArrayVari.main(args);
-        // Base64.main(args);`
-        // ArrayOrdered.main(args);
-        // Fibonacci.main(args);
-        // Null.main(args);
-        // Carte.main(args);
-        // Mate.main(args);
-        ISBN2.main(args);
+        // Esercizi.ISBN.main(args);
+        // Esercizi.TrovaSette.main(args);
+        // Esercizi.MCD.main(args);
+        // Esercizi.IsValidDate.main(args);
+        // Esercizi.Triangoli.main(args);
+        // Esercizi.ArrayVari.main(args);
+        // Esercizi.Base64.main(args);
+        // Esercizi.ArrayOrdered.main(args);
+        // Esercizi.Fibonacci.main(args);
+        // Esercizi.Null.main(args);
+        // Esercizi.Carte.main(args);
+        // Esercizi.Mate.main(args);
     }
 }
