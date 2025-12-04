@@ -41,7 +41,10 @@ public class ISBN2
 
         int result = sommaD + (sommaP * 3);
 
-        return (result % 10 == 0);
+
+        if (result % 10 != 0) return false;
+        
+        return true;
     }
 }
         // foreach (char c in isbn)
