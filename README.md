@@ -83,3 +83,6 @@ Se l'area è calcolabile il triangolo è valido
 ## Mate
 Alcune funzioni matematiche
 **TBD**
+
+## Extract Values `25-12-05/Extract.cs`
+TBD
