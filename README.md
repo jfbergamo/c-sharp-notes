@@ -63,7 +63,7 @@ Se l'area è calcolabile il triangolo è valido
 ## ArrayOrdered `25-11-25/ArrayOrdered.cs`
 > Controlla se un array è ordinato
 
-## Fibonacci ` 25-11-25/Fibonacci.cs`
+## Fibonacci `25-11-25/Fibonacci.cs`
 > Esercizi sulla sequenza di Fibonacci:
 * Mostra i primi n numeri della sequenza
 * Simula la sequenza con lettere vere

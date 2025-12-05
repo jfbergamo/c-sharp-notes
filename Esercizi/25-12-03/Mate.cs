@@ -49,7 +49,6 @@ namespace Esercizi
                     l = avg;
                 }
                 avg = (l + r) / 2;
-                Console.WriteLine(avg*avg);
             }
 
             return avg;

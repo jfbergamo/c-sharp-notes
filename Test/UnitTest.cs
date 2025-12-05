@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 public class UnitTest<T> : List<Tuple<T, T>>
 {
     private int test_n; 
@@ -9,18 +7,32 @@ public class UnitTest<T> : List<Tuple<T, T>>
         test_n = 0;
     }
 
-    public bool TestOne(Tuple<T,T> test)
+    public bool TestOne(Tuple<T,T> a)
     {
         this.test_n++;
-        if (test.Item1?.Equals(test.Item2) ?? true)
+        T provided = a.Item1;
+        T expected = a.Item2;
+
+        if (AreEquals(provided, expected))
         {
             return true;
         }
         else
         {
-            Console.Error.WriteLine($"ERRORE: Test numero {this.test_n} fallito! Atteso: {test.Item2?.ToString() ?? "null"}, ottenuto {test.Item1?.ToString() ?? "null"}.");
+            Console.Error.WriteLine(
+                $"ERRORE: Test numero {this.test_n} fallito! " +
+                $"Ottenuto {provided?.ToString() ?? "null"}, " +
+                $"atteso: {expected?.ToString() ?? "null"}"
+            );
             return false;
         }
+    }
+
+    static bool AreEquals(T a, T b)
+    {
+        if (a == null && b == null) return true;
+        if (a == null || b == null) return false;
+        return a?.Equals(b) ?? UNREACHABLE("AreEquals");
     }
 
     public void Add(T provided, T expected)
@@ -43,4 +55,6 @@ public class UnitTest<T> : List<Tuple<T, T>>
         test_n = 0;
         Clear();
     }
+
+    static bool UNREACHABLE(string msg) { Console.Error.WriteLine(msg); Environment.Exit(1); return false; }
 }
