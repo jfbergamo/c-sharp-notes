@@ -1,29 +1,23 @@
-# Note sugli algoritmi
+# Esercizi di C#
 
-## Validità ISBN
-* composto da 13 numeri
-* sommare tutti i numeri in posizione dispari
-* sommare tutti i numeri in posizione pari moltiplicati per 3
-* se la somma delle due somme è un multiplo di 10 allora è valido
+## Validità ISBN `25-11-04/ISBN.cs`
+> Dato una stringa, controlla se può essere un ISBN
 
-## Trova il 7
-Come capire se un numero ha il 7 senza convertirlo in stringa:
-```c-sharp
-static bool hasSeven(int n)
-{
-    int x = n;
-    int mod;
-    while (x > 0)
-    {
-        mod = x % 10;
-        if (mod == 7) return true;
-        x /= 10;
-    }
-    return false;
-}
-```
+**Come controllare la validità di un ISBN:**
+* Deve essere composto da 13 numeri
+* La somma di *tutti i numeri in posizione dispari* e di *tutti i numeri in posizione pari moltiplicati per 3* deve esere un *multiplo di 10*.
 
-## Formula MCD
+## Trova il 7 `25-11-11/TrovaSette.cs`
+> Conta fino a 100 e stampa `BOOM` se il numero è multiplo di 7, `BAM` se contiene un 7 e `BEM` se è multiplo e contiene un 7.
+
+Il metodo per trovare il 7 non prevede conversioni in stringhe. Vedi metodo `hasSeven()` per capire come.
+
+## MCD `25-11-18/MCD.cs`
+> Calcola l'MCD di due numeri e implementa degli Unit Test.
+
+I test sono implementati con la classe `Test/UnitTest.cs`.
+
+**L'algorimo per calcolare l'MCD è il seguente:**
 ```
 MCD(a, b):
     a/b
@@ -32,13 +26,18 @@ MCD(a, b):
     ripetere
 ```
 
-## Anno bisestile:
+## Validatore di Data `25-11-18/IsValidDate.cs`
+> Implementa dei test per validare una data.
+
+**Come riconoscere un anno bisestile:**
 * lo è se è divisibile per 4
 * ma non lo è se è divisibile per 100
 * ma lo è se è divisibile per 400
 
-## Triangoli
-Data una terna di numeri, calcolare se possono essere lati di un triangolo
+## Triangoli `25-11-18/Triangoli.cs`
+> Data una terna di numeri, calcolare se possono essere lati di un triangolo.
+
+**Algoritmo utilizzato:**
 ```
 p -> semiperimetro
 p = (a+b+c)/2
@@ -46,8 +45,8 @@ A = sqrt(p*(p-a)*(p-b)*(p-c))
 Se l'area è calcolabile il triangolo è valido
 ```
 
-## Array
-Alcuni esercizi con gli array, tra cui:
+## Array `25-11-18/ArrayVari.cs`
+> Alcuni esercizi con gli array, tra cui:
 * Elenca quanti giorni hanno i mesi per X anni
 * Merge sort tra due array ordinati
 * Merge sort con un array di array ordinati
@@ -56,25 +55,27 @@ Alcuni esercizi con gli array, tra cui:
 * Converte una stringa in un array dei suoi codici ASCII
 * Controlla se una parola è in ordine alfabetico
 
-## Base64
+## Base64 `25-11-21/Base64.cs`
+> Implementa un encoder e decoder di Base64. **Esercizio di verifica.**
 * Codifica un array di byte in una stringa in Base64
 * Decodifica una stringa in Base64 in un array di byte
 
-## ArrayOrdered
-* Controlla se un array è ordinato
+## ArrayOrdered `25-11-25/ArrayOrdered.cs`
+> Controlla se un array è ordinato
 
-## Fibonacci
-Esercizi sulla sequenza di Fibonacci:
+## Fibonacci ` 25-11-25/Fibonacci.cs`
+> Esercizi sulla sequenza di Fibonacci:
 * Mostra i primi n numeri della sequenza
 * Simula la sequenza con lettere vere
-* **TODO** Esercizio di Tissino
+* **TODO** Esercizio con dragon.xml
 
-## Null
-Esercizio per testare le variabili nullable.
+## Null `25-12-02/Null.cs`
+> Esercizio per testare le variabili nullable.
+
 **Da rivedere**
 
-## Carte (TODO)
-Esercizi sulle carte da Scala.
+## Carte `25-12-03/Carte.cs` (TODO)
+> Esercizi sulle carte da Scala.
 * Data una stringa, indicare se la carta è valida
 * Data una carta, indicare la sua carta successiva, se non c'è null
 * Mescola un mazzo di carte ([Algoritmo Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
