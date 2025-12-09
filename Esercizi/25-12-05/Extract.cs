@@ -8,6 +8,8 @@ namespace Esercizi
         {
             var u = new UnitTest<string>();
 
+            Condition filter = (x) => x == 7;
+
             u.Add(
                 ArrayToString(ExtractValues(new int[] {2, 4, 6, 8})),
                 ArrayToString(new int[] {2, 4, 6, 8})
@@ -32,8 +34,6 @@ namespace Esercizi
                 ArrayToString(ExtractValues(new int[] {2, 4, 6, 8, 10}, 1)),
                 ArrayToString(new int[] {2, 4, 6, 8, 10})
             );
-
-            Condition filter = (x) => x == 7;
 
             u.Add(
                 ArrayToString(ExtractValuesX(new int[] {2, 4, 6, 8, 10}, filter)),
