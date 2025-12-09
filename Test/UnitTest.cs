@@ -7,31 +7,29 @@ public class UnitTest<T> : List<Tuple<T, T>>
         test_n = 0;
     }
 
-    public bool TestOne(Tuple<T,T> a)
+    bool TestOne(Tuple<T,T> a)
     {
         this.test_n++;
         T provided = a.Item1;
         T expected = a.Item2;
 
-        if (AreEquals(provided, expected))
-        {
-            return true;
-        }
-        else
-        {
-            Console.Error.WriteLine(
-                $"ERRORE: Test numero {this.test_n} fallito! " +
-                $"Ottenuto {provided?.ToString() ?? "null"}, " +
-                $"atteso: {expected?.ToString() ?? "null"}"
-            );
-            return false;
-        }
+        if (AreEquals(provided, expected)) return true;
+        
+        Console.Error.WriteLine(
+            $"ERRORE: Test numero {this.test_n} fallito! " +
+            $"Ottenuto {provided?.ToString() ?? "null"}, " +
+            $"atteso: {expected?.ToString() ?? "null"}"
+        );
+        return false;
     }
 
     static bool AreEquals(T a, T b)
     {
-        if (a == null && b == null) return true;
-        if (a == null || b == null) return false;
+        if (a == null)
+        {
+            if (b == null) return true;
+            return false;
+        }
         return a?.Equals(b) ?? UNREACHABLE("AreEquals");
     }
 
@@ -56,5 +54,5 @@ public class UnitTest<T> : List<Tuple<T, T>>
         Clear();
     }
 
-    static bool UNREACHABLE(string msg) { Console.Error.WriteLine(msg); Environment.Exit(1); return false; }
+    static bool UNREACHABLE(string msg) { Console.Error.WriteLine($"UNREACHABLE: {msg}"); Environment.Exit(1); return false; }
 }
