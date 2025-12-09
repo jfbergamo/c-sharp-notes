@@ -2,7 +2,6 @@ namespace Esercizi
 {
     using Voto = Tuple<string, int>;
     using Seggio = Tuple<string, int>;
-    using System.Net.Http.Headers;
 
     public class EsameGruppo
     {    
