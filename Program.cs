@@ -15,6 +15,7 @@
         // Esercizi.Carte.main(args);
         // Esercizi.Mate.main(args);
         // Esercizi.Extract.main(args);
-        Esercizi.Esame.main(args);
+        // Esercizi.Esame.main(args);
+        Esercizi.EsameGruppo.main(args);
     }
 }
