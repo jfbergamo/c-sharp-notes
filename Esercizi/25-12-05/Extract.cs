@@ -2,6 +2,8 @@ namespace Esercizi
 {
     public class Extract
     {
+        delegate bool Condition(int x);
+
         public static void main(string[] args)
         {
             var u = new UnitTest<string>();
@@ -31,7 +33,7 @@ namespace Esercizi
                 ArrayToString(new int[] {2, 4, 6, 8, 10})
             );
 
-            Func<int, bool> filter = (x) => x == 7;
+            Condition filter = (x) => x == 7;
 
             u.Add(
                 ArrayToString(ExtractValuesX(new int[] {2, 4, 6, 8, 10}, filter)),
@@ -60,7 +62,7 @@ namespace Esercizi
             return result;
         }
         
-        static int[] ExtractValuesX(int[] values, Func<int, bool> filter)
+        static int[] ExtractValuesX(int[] values, Condition filter)
         {
             int count = 0;
             foreach (int value in values) if (filter(value)) count++;
