@@ -4,7 +4,7 @@
 
         private const int ISBN_LENGTH = 13;
 
-        static int Interactive()
+        static void Interactive()
         {
             while (true)
             {
@@ -17,14 +17,14 @@
                 Console.Write("Vuoi controllare un altro codice? [S/N]: ");
                 if (Console.ReadLine()?.ToLower() != "s") break;
             }
-            return 0;
+            return;
         }
 
-        public static int main(string[] args)
+        public static void main(string[] args)
         {
             bool interactive = false;
 
-            if (interactive) return Interactive();
+            if (interactive) {Interactive(); return; }
 
             var u = new UnitTest<bool>();
 
@@ -46,7 +46,7 @@
 
             if (u.TestAll()) Console.WriteLine("Test superati.");
 
-            return 0;
+            return;
         }
         
         static bool IsValidISBN(string code) {
