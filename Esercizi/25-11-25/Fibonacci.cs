@@ -43,7 +43,7 @@ namespace Esercizi
 
         static string Directions(int limit)
         {
-            // TODO: farlo
+            // TODO: dragon.xml
             // https://lab.tissino.it/dragon.xml
             // https://snap.berkeley.edu/
             return "";

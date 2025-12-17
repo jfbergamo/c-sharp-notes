@@ -1,21 +1,29 @@
 # Esercizi di C#
 
-## Validità ISBN `25-11-04/ISBN.cs`
+### TODO
+- [ ] [Triangoli](Esercizi/25-11-18/Triangoli.cs): Aggiungere dei test
+- [ ] [Fibonacci](Esercizi/25-11-25/Fibonacci.cs): Esercizio con dragon.xml
+- [ ] [Null](Esercizi/25-12-02/Null.cs): Aggiungere dei test
+- [ ] [Carte](Esercizi/25-12-02/Carte.cs): Intero esercizio
+- [ ] [Mate](Esercizi/25-12-03/Mate.cs): Sistemare tutto
+- [ ] ExtractValues: aggiungere la descrizione nel README
+
+## [Validità ISBN](Esercizi/25-11-04/ISBN.cs)
 > Dato una stringa, controlla se può essere un ISBN
 
 **Come controllare la validità di un ISBN:**
 * Deve essere composto da 13 numeri
 * La somma di *tutti i numeri in posizione dispari* e di *tutti i numeri in posizione pari moltiplicati per 3* deve esere un *multiplo di 10*.
 
-## Trova il 7 `25-11-11/TrovaSette.cs`
+## [Trova il 7](Esercizi/25-11-11/TrovaSette.cs)
 > Conta fino a 100 e stampa `BOOM` se il numero è multiplo di 7, `BAM` se contiene un 7 e `BEM` se è multiplo e contiene un 7.
 
 Il metodo per trovare il 7 non prevede conversioni in stringhe. Vedi metodo `hasSeven()` per capire come.
 
-## MCD `25-11-18/MCD.cs`
+## [MCD](Esercizi/25-11-18/MCD.cs)
 > Calcola l'MCD di due numeri e implementa degli Unit Test.
 
-I test sono implementati con la classe `Test/UnitTest.cs`.
+I test sono implementati con la classe [`Test/UnitTest.cs`](Test/UnitTest.cs).
 
 **L'algorimo per calcolare l'MCD è il seguente:**
 ```
@@ -26,7 +34,7 @@ MCD(a, b):
     ripetere
 ```
 
-## Validatore di Data `25-11-18/IsValidDate.cs`
+## [Validatore di Data](Esercizi/25-11-18/IsValidDate.cs)
 > Implementa dei test per validare una data.
 
 **Come riconoscere un anno bisestile:**
@@ -34,8 +42,9 @@ MCD(a, b):
 * ma non lo è se è divisibile per 100
 * ma lo è se è divisibile per 400
 
-## Triangoli `25-11-18/Triangoli.cs`
+## [Triangoli](Esercizi/25-11-18/Triangoli.cs)
 > Data una terna di numeri, calcolare se possono essere lati di un triangolo.
+* TODO: aggiungere dei test
 
 **Algoritmo utilizzato:**
 ```
@@ -45,7 +54,7 @@ A = sqrt(p*(p-a)*(p-b)*(p-c))
 Se l'area è calcolabile il triangolo è valido
 ```
 
-## Array `25-11-18/ArrayVari.cs`
+## [Array](Esercizi/25-11-18/ArrayVari.cs)
 > Alcuni esercizi con gli array, tra cui:
 * Elenca quanti giorni hanno i mesi per X anni
 * Merge sort tra due array ordinati
@@ -55,34 +64,32 @@ Se l'area è calcolabile il triangolo è valido
 * Converte una stringa in un array dei suoi codici ASCII
 * Controlla se una parola è in ordine alfabetico
 
-## Base64 `25-11-21/Base64.cs`
+## [Base64](Esercizi/25-11-21/Base64.cs)
 > Implementa un encoder e decoder di Base64. **Esercizio di verifica.**
 * Codifica un array di byte in una stringa in Base64
 * Decodifica una stringa in Base64 in un array di byte
 
-## ArrayOrdered `25-11-25/ArrayOrdered.cs`
+## [ArrayOrdered](Esercizi/25-11-25/ArrayOrdered.cs)
 > Controlla se un array è ordinato
 
-## Fibonacci `25-11-25/Fibonacci.cs`
+## [Fibonacci](Esercizi/25-11-25/Fibonacci.cs)
 > Esercizi sulla sequenza di Fibonacci:
 * Mostra i primi n numeri della sequenza
 * Simula la sequenza con lettere vere
 * **TODO** Esercizio con dragon.xml
 
-## Null `25-12-02/Null.cs`
+## [Null](Esercizi/25-12-02/Null.cs)
 > Esercizio per testare le variabili nullable.
+* **TODO**
 
-**Da rivedere**
-
-## Carte `25-12-03/Carte.cs` (TODO)
+## [Carte](Esercizi/25-12-02/Carte.cs) (TODO)
 > Esercizi sulle carte da Scala.
 * Data una stringa, indicare se la carta è valida
 * Data una carta, indicare la sua carta successiva, se non c'è null
 * Mescola un mazzo di carte ([Algoritmo Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
 
-## Mate
-Alcune funzioni matematiche
-**TBD**
+## [Mate](Esercizi/25-12-03/Mate.cs)
+Alcune funzioni matematiche (TODO: sistemare)
 
-## Extract Values `25-12-05/Extract.cs`
-TBD
+## [Extract Values](Esercizi/25-12-05/Extract.cs)
+TODO: descrizione

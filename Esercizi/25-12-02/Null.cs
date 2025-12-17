@@ -5,6 +5,7 @@ namespace Esercizi
         public static void main(string[] args)
         {
             var u = new UnitTest<double?>();
+            // TODO: aggiungere dei test
             u.Add(
                 PeggioreTraIscritti(
                     new double[]{-3, -5, -1.5, 6, 12, 4},

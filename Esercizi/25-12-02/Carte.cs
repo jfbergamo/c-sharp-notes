@@ -1,5 +1,7 @@
 namespace Esercizi
 {
+    // TODO: tutto
+
     public class Carte
     {
         // * Data una stringa, indicare se la carta è valida
