@@ -24,7 +24,12 @@
         {
             bool interactive = false;
 
-            if (interactive) {Interactive(); return; }
+            foreach (string arg in args)
+            {
+                if (arg == "-i") interactive = true;
+            }
+
+            if (interactive) { Interactive(); return; }
 
             var u = new UnitTest<bool>();
 

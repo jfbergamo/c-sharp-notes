@@ -1,7 +1,4 @@
-﻿using System.Net.NetworkInformation;
-using System.Security.Cryptography;
-
-public class Program
+﻿public class Program
 {
     delegate void MainFn(string[] args);
     static Dictionary<string, MainFn> exs = new Dictionary<string, MainFn>();
