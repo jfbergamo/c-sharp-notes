@@ -1,7 +1,6 @@
 # Esercizi di C#
 
 ### TODO
-- [ ] [Triangoli](Esercizi/25-11-18/Triangoli.cs): Aggiungere dei test
 - [ ] [Fibonacci](Esercizi/25-11-25/Fibonacci.cs): Esercizio con dragon.xml
 - [ ] [Null](Esercizi/25-12-02/Null.cs): Aggiungere dei test
 - [ ] [Carte](Esercizi/25-12-02/Carte.cs): Intero esercizio
@@ -44,7 +43,6 @@ MCD(a, b):
 
 ## [Triangoli](Esercizi/25-11-18/Triangoli.cs)
 > Data una terna di numeri, calcolare se possono essere lati di un triangolo.
-* TODO: aggiungere dei test
 
 **Algoritmo utilizzato:**
 ```
