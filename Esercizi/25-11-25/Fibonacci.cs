@@ -4,9 +4,10 @@ namespace Esercizi
     {
         public static void main(string[] args)
         {
-            int limit = 5000;
-            FibNumbers(limit);
-            FibAB(limit, 'R', 'L');
+            int limit = 500;
+            // FibNumbers(limit);
+            // Console.WriteLine(FibAB(limit));
+            Dragon(limit);
         }
 
         static void FibNumbers(int limit)
@@ -24,12 +25,13 @@ namespace Esercizi
             }
         }
 
-        static void FibAB(int limit, char a = 'A', char b = 'B')
+        static string FibAB(int limit, char a = 'A', char b = 'B')
         {
             string result = $"{a}";
             while (result.Length <= limit)
             {
-                Console.WriteLine(result);
+                // result += fib;
+                // Console.WriteLine(fib);
                 string c = "";
                 for (int i = 0; i < result.Length; i++)
                 {
@@ -39,14 +41,14 @@ namespace Esercizi
                 result = c;
             }
             // Console.WriteLine(result);
+            return result;
         }
 
-        static string Directions(int limit)
+        static void Dragon(int limit)
         {
-            // TODO: dragon.xml
-            // https://lab.tissino.it/dragon.xml
-            // https://snap.berkeley.edu/
-            return "";
+            string result = FibAB(limit, 'R', 'L');
+            Console.WriteLine(result);
+            Console.WriteLine("Recati su https://snap.berkeley.edu/ e inserisci ./dragon.xml");
         }
     }
 }

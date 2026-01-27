@@ -1,7 +1,6 @@
 # Esercizi di C#
 
 ### TODO
-- [ ] [Fibonacci](Esercizi/25-11-25/Fibonacci.cs): Esercizio con dragon.xml
 - [ ] [Null](Esercizi/25-12-02/Null.cs): Aggiungere dei test
 - [ ] [Carte](Esercizi/25-12-02/Carte.cs): Intero esercizio
 - [ ] [Mate](Esercizi/25-12-03/Mate.cs): Sistemare tutto
@@ -74,7 +73,7 @@ Se l'area è calcolabile il triangolo è valido
 > Esercizi sulla sequenza di Fibonacci:
 * Mostra i primi n numeri della sequenza
 * Simula la sequenza con lettere vere
-* **TODO** Esercizio con dragon.xml
+* Genera una sequenza di Fibonacci per muovere un drago su [Snap!](https://snap.berkeley.edu/)
 
 ## [Null](Esercizi/25-12-02/Null.cs)
 > Esercizio per testare le variabili nullable.
